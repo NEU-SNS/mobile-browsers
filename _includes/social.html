@@ -1,0 +1,8 @@
+{%- assign social = site.minima.social_links -%}
+
+<ul class="social-media-list">
+  <li><a href="https://petsymposium.org/popets/2023/popets-2023-0003.pdf" target="_blank">Paper</a></li>
+  <li><a href="https://github.com/amoghbl1/dynamic-tripwire" target="_blank">Test Framework</a></li>
+  {%- if social.paper -%}<li><a href="{{ social.paper.link | cgi_escape | escape }}" target="_blank" title="{{ social.paper.name | escape }}">Paper</a></li>{%- endif -%}
+  {%- if social.tripwire -%}<li><a href="{{ social.tripwire.link }}" target="_blank" title="{{ social.tripwire.name | escape }}">Test Framework</a></li>{%- endif -%}
+</ul>

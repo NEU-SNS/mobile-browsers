@@ -7,8 +7,6 @@ title: Not Your Average App
 
 ---
 
-# Mobile Browsers
-
 Mobile browsers occupy a unique space in the mobile ecosystem.
 They enable users to browse the Internet and are responsible for various functions in this process.
 More specifically, due to this special position, browsers enjoy access to various _Personally Identifiable Information (PII)._

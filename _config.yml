@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Not Your Average App"
+title: "Not Your Average App: A Large-scale Privacy Analysis of Android Browsers"
 email: amoghbl1@ccs.neu.edu
 author:
   name: Amogh Pradeep

@@ -10,7 +10,7 @@ title: Not Your Average App
 Mobile browsers occupy a unique space in the mobile ecosystem.
 They enable users to browse the Internet and are responsible for various functions in this process.
 More specifically, due to this special position, browsers have access to various _Personally Identifiable Information (PII)._
-More specifically they can access the following:
+Mobile browsers have access to the following:
 
 * User browsing data
   * Browsing history

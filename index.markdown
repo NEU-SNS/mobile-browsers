@@ -9,7 +9,7 @@ title: Not Your Average App
 
 Mobile browsers occupy a unique space in the mobile ecosystem.
 They enable users to browse the Internet and are responsible for various functions in this process.
-More specifically, due to this special position, browsers enjoy access to various _Personally Identifiable Information (PII)._
+More specifically, due to this special position, browsers have access to various _Personally Identifiable Information (PII)._
 More specifically they can access the following:
 
 * User browsing data
@@ -28,7 +28,35 @@ With this access to such sensitive user data, browsers get to **harm** users or 
 
 ---
 
-# Harms To Users
+# Summary of Key Results
+
+### Browsing History Collection
+
+* ~3% (13 of 424) of browsers send browsing history to endpoints on the Internet along with one or more identifiers
+* ~9% (37 of 424) share browsing history with endpoints where purpose cannot be ascertained (based on publicly available information)
+* ~14% (60 of 424) share browsing history related to known browsing features (sitecheck, suggestions, search, etc.)
+
+Popular browsers that collect history include Opera, Yandex Browser, and UC Browser.
+
+### Observed PII Exposure
+
+* 2% Google Play and 6% Chinese Browsers collect non-resettable identifiers, which is extremely harmful to user privacy.
+* 32% browsers collect at least one identifier, resettable and/or non-resettable.
+
+
+### Improper TLS Implementation
+
+Improper TLS implementations expose users of browsers to arbitrary *machine in the middle(mitm)* attacks, which is highly dangerous.
+
+10% browsers are vulnerable to such attacks.
+
+Further details and results can be found in the [paper](https://petsymposium.org/popets/2023/popets-2023-0003.pdf).
+
+---
+
+# Detection Goals
+
+### Harms To Users
 
 The harms we look for in this project are described below.
 
@@ -44,7 +72,7 @@ This is harmful to users.
 **Insufficient Connection Security:**
 Browsers that fail to implement basic connection security (specifically HTTPS) would expose users to risks on the internet, specifically MITM attacks.
 
-# Protections For Users
+### Protections For Users
 
 The protections we look for are described below.
 
@@ -71,32 +99,6 @@ We first collect 424 *Android* browsers from a number of sources:
 ![Testing Framework](/assets/framework.png)
 
 We install browsers on a physical Android device and instrument them to visit multiple websites while collecting all traffic with [mitmproxy](https://mitmproxy.org/) allowing us to answer if browsers **harm** or **protect** users.
-
----
-
-# Results
-
-### Browsing History Collection
-
-* ~3% (13 of 424) of browsers send browsing history to endpoints on the Internet along with one or more identifiers
-* ~9% (37 of 424) share browsing history with endpoints where purpose cannot be ascertained (based on publicly available information)
-* ~14% (60 of 424) share browsing history related to known browsing features (sitecheck, suggestions, search, etc.)
-
-Popular browsers that collect history include Opera, Yandex Browser, and UC Browser.
-
-### Observed PII Exposure
-
-* 2% Google Play and 6% Chinese Browsers collect non-resettable identifiers, which is extremely harmful to user privacy.
-* 32% browsers collect at least one identifier, resettable and/or non-resettable.
-
-
-### Improper TLS Implementation
-
-Improper TLS implementations expose users of browsers to arbitrary *machine in the middle(mitm)* attacks, which is highly dangerous.
-
-10% browsers are vulnerable to such attacks.
-
-Further details and results can be found in the [paper](https://petsymposium.org/popets/2023/popets-2023-0003.pdf).
 
 ---
 
